@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/notes.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/colors.css') }}">
+
+<script src="{{ url_for('static', filename='js/predefined/marked.js') }}"></script>
+<script src="{{ url_for('static', filename='js/predefined/latex.js') }}"></script>

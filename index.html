@@ -170,7 +170,7 @@
     <div id="syllabus"></div>
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
-            const subjectName = "placement_notes";
+            const subjectName = "placements";
             document.getElementById('subject_name').innerText = subjectName.replace('_',' ');
             try {
                 const response = await fetch(`https://raw.githubusercontent.com/GitKaran4723/${subjectName}/main/syllabus.json`);

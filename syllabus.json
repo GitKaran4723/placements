@@ -1,45 +1,43 @@
 {
-  "Aptitude Test/Subject Test": [
-    {
-      "Logical Reasoning": [
-        "Puzzles",
-        "Blood Relations",
-        "Seating Arrangements",
-        "Syllogisms",
-        "Analogies",
-        "Logical Deduction",
-        "Critical Reasoning",
-        "Data Interpretation"
-      ],
-      "Quantitative Aptitude": [
-        "Arithmetic Problems (Percentages, Profit & Loss, etc.)",
-        "Number Series",
-        "Simplifications and Approximations",
-        "Time and Work",
-        "Time, Speed, and Distance",
-        "Ratio and Proportion",
-        "Probability",
-        "Permutations and Combinations"
-      ],
-      "Verbal Ability": [
-        "Reading Comprehension",
-        "Synonyms and Antonyms",
-        "Sentence Correction",
-        "Para Jumbles",
-        "Cloze Test",
-        "Idioms and Phrases",
-        "Spotting Errors",
-        "Sentence Completion"
-      ],
-      "Technical Subjects": [
-        "Data Structures Basics",
-        "Programming Languages (C, C++, Java, etc.)",
-        "Operating Systems Basics",
-        "Database Management Basics",
-        "Computer Networks Basics"
-      ]
-    }
-  ],
+  "Aptitude Test/Subject Test": {
+    "Logical Reasoning": [
+      "Puzzles",
+      "Blood Relations",
+      "Seating Arrangements",
+      "Syllogisms",
+      "Analogies",
+      "Logical Deduction",
+      "Critical Reasoning",
+      "Data Interpretation"
+    ],
+    "Quantitative Aptitude": [
+      "Arithmetic Problems (Percentages, Profit & Loss, etc.)",
+      "Number Series",
+      "Simplifications and Approximations",
+      "Time and Work",
+      "Time, Speed, and Distance",
+      "Ratio and Proportion",
+      "Probability",
+      "Permutations and Combinations"
+    ],
+    "Verbal Ability": [
+      "Reading Comprehension",
+      "Synonyms and Antonyms",
+      "Sentence Correction",
+      "Para Jumbles",
+      "Cloze Test",
+      "Idioms and Phrases",
+      "Spotting Errors",
+      "Sentence Completion"
+    ],
+    "Technical Subjects": [
+      "Data Structures Basics",
+      "Programming Languages (C, C++, Java, etc.)",
+      "Operating Systems Basics",
+      "Database Management Basics",
+      "Computer Networks Basics"
+    ]
+  },
   "Coding Round": [
     {
       "Data Structures": [
