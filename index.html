@@ -171,7 +171,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
             const subjectName = "placements";
-            document.getElementById('subject_name').innerText = subjectName.replace('_',' ');
+            document.getElementById('subject_name').innerText = subjectName.replace('_', ' ');
+
             try {
                 const response = await fetch(`https://raw.githubusercontent.com/GitKaran4723/${subjectName}/main/syllabus.json`);
                 if (!response.ok) {
@@ -189,6 +190,7 @@
                     const subjectGroup = placementSyllabus[section];
 
                     Object.keys(subjectGroup).forEach(subject => {
+                        
                         const collapsibleButton = document.createElement('button');
                         collapsibleButton.textContent = subject;
                         collapsibleButton.className = 'collapsible';
@@ -197,52 +199,18 @@
                         const contentDiv = document.createElement('div');
                         contentDiv.className = 'content';
 
-                        subjectGroup[subject].forEach(topic => {
-                            const topicButton = document.createElement('button');
-                            topicButton.textContent = topic;
-                            topicButton.className = 'topic-button';
+                        const topics = subjectGroup[subject];
 
-                            const noteContent = document.createElement('div');
-                            noteContent.className = 'note-content';
-                            noteContent.innerHTML = "Notes Coming Soon.";
-
-                            topicButton.addEventListener('click', async () => {
-                                console.log(subject.replace(' ', '_'), topic);
-
-                                // Close all other noteContent sections
-                                const allNoteContents = document.querySelectorAll('.note-content');
-                                allNoteContents.forEach(content => {
-                                    if (content !== noteContent) {
-                                        content.style.display = 'none';
-                                    }
-                                });
-
-                                // Fetch and display notes for the clicked topic
-                                if (noteContent.style.display === 'block') {
-                                    noteContent.style.display = 'none';
-                                } else {
-                                    noteContent.style.display = 'block';
-
-                                    // Fetch the note content from the corresponding URL
-                                    const topicURL = `https://raw.githubusercontent.com/GitKaran4723/${subjectName}/main/notes/${encodeURIComponent(section)}/${encodeURIComponent(subject)}/${encodeURIComponent(topic)}.md`;
-
-                                    try {
-                                        const noteResponse = await fetch(topicURL);
-                                        if (!noteResponse.ok) {
-                                            throw new Error('Failed to fetch notes');
-                                        }
-                                        const noteText = await noteResponse.text();
-                                        noteContent.innerHTML = marked.parse(noteText);
-                                    } catch (noteError) {
-                                        console.error('Error fetching or processing note content:', noteError);
-                                        noteContent.innerHTML = "Failed to load notes.";
-                                    }
-                                }
+                        if (Array.isArray(topics)) {
+                            topics.forEach(topic => {
+                                createTopicButton(contentDiv, section, subject, topic);
                             });
-
-                            contentDiv.appendChild(topicButton);
-                            contentDiv.appendChild(noteContent);
-                        });
+                        } else if (typeof topics === 'object' && topics !== null) {
+                            Object.keys(topics).forEach(subTopicKey => {
+                                const subTopics = topics[subTopicKey];
+                                createSubTopicButtons(contentDiv, section, subject, subTopicKey, subTopics);
+                            });
+                        }
 
                         syllabusContainer.appendChild(contentDiv);
                     });
@@ -250,16 +218,13 @@
 
                 document.querySelectorAll('.collapsible').forEach(button => {
                     button.addEventListener('click', function () {
-                        // Get the currently active collapsible section
                         const currentlyActive = document.querySelector('.collapsible.active');
 
-                        // If there is an active section and it's not the one that was clicked, close it
                         if (currentlyActive && currentlyActive !== this) {
                             currentlyActive.classList.remove('active');
                             currentlyActive.nextElementSibling.style.display = "none";
                         }
 
-                        // Toggle the clicked section
                         this.classList.toggle('active');
                         const content = this.nextElementSibling;
                         if (this.classList.contains('active')) {
@@ -273,6 +238,62 @@
 
             } catch (error) {
                 console.error('Error fetching or processing data:', error);
+            }
+
+            function createTopicButton(contentDiv, section, subject, topic) {
+                const topicButton = document.createElement('button');
+                topicButton.textContent = topic;
+                topicButton.className = 'topic-button';
+
+                const noteContent = document.createElement('div');
+                noteContent.className = 'note-content';
+                noteContent.innerHTML = "Notes Coming Soon.";
+
+                topicButton.addEventListener('click', async () => {
+                    handleTopicClick(noteContent, section, subject, topic);
+                });
+
+                contentDiv.appendChild(topicButton);
+                contentDiv.appendChild(noteContent);
+            }
+
+            function createSubTopicButtons(contentDiv, section, subject, subTopicKey, subTopics) {
+                const subTopicHeader = document.createElement('h3');
+                subTopicHeader.textContent = subTopicKey;
+                contentDiv.appendChild(subTopicHeader);
+
+                subTopics.forEach(subTopic => {
+                    createTopicButton(contentDiv, section, `${subject}/${subTopicKey}`, subTopic);
+                });
+            }
+
+            async function handleTopicClick(noteContent, section, subject, topic) {
+                const allNoteContents = document.querySelectorAll('.note-content');
+                allNoteContents.forEach(content => {
+                    if (content !== noteContent) {
+                        content.style.display = 'none';
+                    }
+                });
+
+                if (noteContent.style.display === 'block') {
+                    noteContent.style.display = 'none';
+                } else {
+                    noteContent.style.display = 'block';
+
+                    const topicURL = `https://raw.githubusercontent.com/GitKaran4723/${subjectName}/main/notes/${encodeURIComponent(section)}/${encodeURIComponent(subject)}/${encodeURIComponent(topic)}.md`;
+
+                    try {
+                        const noteResponse = await fetch(topicURL);
+                        if (!noteResponse.ok) {
+                            throw new Error('Failed to fetch notes');
+                        }
+                        const noteText = await noteResponse.text();
+                        noteContent.innerHTML = marked.parse(noteText);
+                    } catch (noteError) {
+                        console.error('Error fetching or processing note content:', noteError);
+                        noteContent.innerHTML = "Failed to load notes.";
+                    }
+                }
             }
         });
     </script>

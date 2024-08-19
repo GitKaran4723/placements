@@ -38,110 +38,104 @@
       "Computer Networks Basics"
     ]
   },
-  "Coding Round": [
-    {
-      "Data Structures": [
-        "Arrays",
-        "Linked Lists",
-        "Stacks and Queues",
-        "Trees (Binary Trees, BST)",
-        "Graphs (DFS, BFS, etc.)",
-        "Hashing",
-        "Heaps",
-        "Tries"
-      ],
-      "Algorithms": [
-        "Sorting and Searching",
-        "Greedy Algorithms",
-        "Divide and Conquer",
-        "Backtracking",
-        "Dynamic Programming",
-        "Graph Algorithms (Shortest Path, MST)",
-        "Bit Manipulation"
-      ],
-      "Dynamic Programming": [
-        "Fibonacci Series",
-        "Knapsack Problem",
-        "Longest Common Subsequence",
-        "Matrix Chain Multiplication",
-        "Subset Sum Problem",
-        "Coin Change Problem"
-      ],
-      "Object-Oriented Programming": [
-        "Classes and Objects",
-        "Inheritance",
-        "Polymorphism",
-        "Encapsulation",
-        "Abstraction",
-        "Design Patterns",
-        "SOLID Principles"
-      ]
-    }
-  ],
-  "Technical Interview": [
-    {
-      "Data Structures and Algorithms": [
-        "Advanced Data Structures (Segment Trees, Fenwick Trees)",
-        "Complex Algorithms (KMP, Rabin-Karp, etc.)",
-        "Algorithm Optimization Techniques"
-      ],
-      "Operating Systems": [
-        "Process Management",
-        "Threading and Concurrency",
-        "Memory Management (Paging, Segmentation)",
-        "File Systems",
-        "Deadlocks"
-      ],
-      "Database Management Systems": [
-        "Normalization",
-        "SQL Queries",
-        "Transaction Management",
-        "ACID Properties",
-        "Indexing and Optimization"
-      ],
-      "Computer Networks": [
-        "OSI Model",
-        "TCP/IP Protocols",
-        "Network Topologies",
-        "Routing Algorithms",
-        "Network Security Basics"
-      ],
-      "System Design": [
-        "High-Level Design",
-        "Low-Level Design",
-        "Scalability",
-        "Load Balancing",
-        "Design Patterns",
-        "Microservices Architecture"
-      ]
-    }
-  ],
-  "HR Interview": [
-    {
-      "Communication Skills": [
-        "Effective Speaking",
-        "Active Listening",
-        "Clarity in Communication",
-        "Body Language"
-      ],
-      "Behavioral Questions": [
-        "STAR Method (Situation, Task, Action, Result)",
-        "Handling Conflicts",
-        "Teamwork and Collaboration",
-        "Leadership Examples"
-      ],
-      "Company Knowledge": [
-        "Company History and Values",
-        "Recent Achievements",
-        "Key Products or Services",
-        "Market Position and Competitors"
-      ],
-      "Cultural Fit": [
-        "Adaptability",
-        "Work Ethic",
-        "Values Alignment",
-        "Problem-Solving Approach"
-      ]
-    }
-  ]
+  "Coding Round": {
+    "Data Structures": [
+      "Arrays",
+      "Linked Lists",
+      "Stacks and Queues",
+      "Trees (Binary Trees, BST)",
+      "Graphs (DFS, BFS, etc.)",
+      "Hashing",
+      "Heaps",
+      "Tries"
+    ],
+    "Algorithms": [
+      "Sorting and Searching",
+      "Greedy Algorithms",
+      "Divide and Conquer",
+      "Backtracking",
+      "Dynamic Programming",
+      "Graph Algorithms (Shortest Path, MST)",
+      "Bit Manipulation"
+    ],
+    "Dynamic Programming": [
+      "Fibonacci Series",
+      "Knapsack Problem",
+      "Longest Common Subsequence",
+      "Matrix Chain Multiplication",
+      "Subset Sum Problem",
+      "Coin Change Problem"
+    ],
+    "Object-Oriented Programming": [
+      "Classes and Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction",
+      "Design Patterns",
+      "SOLID Principles"
+    ]
+  },
+  "Technical Interview": {
+    "Data Structures and Algorithms": [
+      "Advanced Data Structures (Segment Trees, Fenwick Trees)",
+      "Complex Algorithms (KMP, Rabin-Karp, etc.)",
+      "Algorithm Optimization Techniques"
+    ],
+    "Operating Systems": [
+      "Process Management",
+      "Threading and Concurrency",
+      "Memory Management (Paging, Segmentation)",
+      "File Systems",
+      "Deadlocks"
+    ],
+    "Database Management Systems": [
+      "Normalization",
+      "SQL Queries",
+      "Transaction Management",
+      "ACID Properties",
+      "Indexing and Optimization"
+    ],
+    "Computer Networks": [
+      "OSI Model",
+      "TCP/IP Protocols",
+      "Network Topologies",
+      "Routing Algorithms",
+      "Network Security Basics"
+    ],
+    "System Design": [
+      "High-Level Design",
+      "Low-Level Design",
+      "Scalability",
+      "Load Balancing",
+      "Design Patterns",
+      "Microservices Architecture"
+    ]
+  },
+  "HR Interview": {
+    "Communication Skills": [
+      "Effective Speaking",
+      "Active Listening",
+      "Clarity in Communication",
+      "Body Language"
+    ],
+    "Behavioral Questions": [
+      "STAR Method (Situation, Task, Action, Result)",
+      "Handling Conflicts",
+      "Teamwork and Collaboration",
+      "Leadership Examples"
+    ],
+    "Company Knowledge": [
+      "Company History and Values",
+      "Recent Achievements",
+      "Key Products or Services",
+      "Market Position and Competitors"
+    ],
+    "Cultural Fit": [
+      "Adaptability",
+      "Work Ethic",
+      "Values Alignment",
+      "Problem-Solving Approach"
+    ]
+  }
 }
