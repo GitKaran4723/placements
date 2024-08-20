@@ -190,7 +190,7 @@
                     const subjectGroup = placementSyllabus[section];
 
                     Object.keys(subjectGroup).forEach(subject => {
-                        
+
                         const collapsibleButton = document.createElement('button');
                         collapsibleButton.textContent = subject;
                         collapsibleButton.className = 'collapsible';
@@ -200,8 +200,6 @@
                         contentDiv.className = 'content';
 
                         const topics = subjectGroup[subject];
-
-                        console.log(topics)
 
                         if (Array.isArray(topics)) {
                             topics.forEach(topic => {
@@ -284,6 +282,7 @@
 
                     const topicURL = `https://raw.githubusercontent.com/GitKaran4723/${subjectName}/main/notes/${encodeURIComponent(section)}/${encodeURIComponent(subject)}/${encodeURIComponent(topic)}.md`;
 
+                    console.log("topic URL", topicURL);
                     try {
                         const noteResponse = await fetch(topicURL);
                         if (!noteResponse.ok) {
