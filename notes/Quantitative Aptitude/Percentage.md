@@ -11,21 +11,21 @@ A percentage is a way of expressing a number as a fraction of 100. It is denoted
    - Part = the value to find the percentage of.
    - Whole = the total or reference value.
 
-2. **Conversion between Fraction and Percentage**:
+3. **Conversion between Fraction and Percentage**:
    - To convert a fraction to a percentage, multiply by 100.
      $$\text{Fraction to Percentage} = \text{Fraction} \times 100$$
    - To convert a percentage to a fraction, divide by 100.
      $$\text{Percentage to Fraction} = \frac{\text{Percentage}}{100}$$
 
-3. **Finding the Percentage of a Number**:
+4. **Finding the Percentage of a Number**:
    - To find a percentage of a number, multiply the number by the percentage and divide by 100.
      $$\text{Percentage of a Number} = \frac{\text{Percentage} \times \text{Number}}{100}$$
 
-4. **Finding a Number when a Percentage is Given**:
+5. **Finding a Number when a Percentage is Given**:
    - If you know the percentage and want to find the original number:
      $$\text{Original Number} = \frac{\text{Given Percentage} \times \text{Number}}{\text{Percentage}}$$
 
-5. **Increase or Decrease in Percentage**:
+6. **Increase or Decrease in Percentage**:
    - To calculate the increase or decrease, find the difference and then divide by the original value, finally multiply by 100.
      $$\text{Percentage Increase/Decrease} = \frac{\text{Difference}}{\text{Original Value}} \times 100$$
 
