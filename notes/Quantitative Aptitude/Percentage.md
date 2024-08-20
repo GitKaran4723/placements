@@ -6,9 +6,7 @@ A percentage is a way of expressing a number as a fraction of 100. It is denoted
 #### Key Concepts
 
 1. **Basic Formula**: 
-   $$
-   \text{Percentage} = \left(\frac{\text{Part}}{\text{Whole}}\right) \times 100
-   $$
+   $\text{Percentage} = \left(\frac{\text{Part}}{\text{Whole}}\right) \times 100$
    Where:
    - Part = the value to find the percentage of.
    - Whole = the total or reference value.
