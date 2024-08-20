@@ -1,4 +1,4 @@
-### Percentage: Notes and Examples
+## Notes and Examples
 
 #### Introduction to Percentage
 A percentage is a way of expressing a number as a fraction of 100. It is denoted using the symbol `%`. For example, 50% means 50 out of 100, or simply 50/100.
