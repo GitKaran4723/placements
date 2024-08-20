@@ -1,1 +1,0 @@
-## This contents the notes for percentage, etc
