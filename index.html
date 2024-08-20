@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/colors.css">
     <script src="js/predefined/latex.js"></script>
     <script src="js/predefined/marked.js"></script>
-
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -20,6 +20,9 @@
             },
             svg: {
                 fontCache: 'global'
+            },
+            chtml: {
+                scale: 1
             }
         };
     </script>
@@ -173,7 +176,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
             const subjectName = "placements";
-            
+
 
             try {
                 const response = await fetch(`https://raw.githubusercontent.com/GitKaran4723/${subjectName}/main/syllabus.json`);
@@ -290,12 +293,22 @@
                             throw new Error('Failed to fetch notes');
                         }
                         const noteText = await noteResponse.text();
+                        markdown = escapeHtml(noteText);
                         noteContent.innerHTML = marked.parse(noteText);
+                        MathJax.typeset();
                     } catch (noteError) {
                         console.error('Error fetching or processing note content:', noteError);
                         noteContent.innerHTML = "Coming Soon.";
                     }
                 }
+            }
+            // Function to escape special characters
+            function escapeHtml(text) {
+                return text.replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
             }
         });
     </script>
